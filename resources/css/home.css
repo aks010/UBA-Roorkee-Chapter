@@ -1,0 +1,70 @@
+.par1{
+	    background-image: url("../images/home-about.jpg");
+}
+
+.par2{
+	    background-image: url("../images/home-village.jpg");
+}
+.par3{
+	    background-image: url("../images/home-initiatives.jpg");
+}
+
+.parallax {
+    /* The image used */
+    position: relative;
+
+    /* Set a specific height */
+    height: 300px;
+
+    opacity: 0.65;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax span{
+	background-color: rgba(51,51,51,0.65);
+	/* opacity: 0.65; */
+	font-family: Lato;
+	font-size: 25px;
+	color: #f7f7f7;
+	letter-spacing: 5px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+}
+
+.parallax-text{
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.content .heading span{
+	padding-bottom: 3px;
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 2;
+	border-bottom: 3px solid #cc3300;
+}
+
+.map-item .fa{
+	font-size: 50px;
+	color:  #cc3300;
+	padding: 15px;
+	border: 1px #737373 solid;
+	transform: rotate(45deg);
+	margin: auto;
+}
+
+.map-item{
+	padding: 20px;
+	display: flex;
+	align-items: center;
+}
+.map-item .col-md-4{
+	text-align:  center;
+}

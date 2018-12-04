@@ -1,0 +1,64 @@
+<div class="carousel">
+	<figure>
+		<img src="resources/images/home/car1.jpg" alt="" height="100%" width="100%">
+		<img src="resources/images/home/car2.jpg" alt="" height="100%" width="100%">
+		<!-- <img src="resources/images/home/car3.png" alt="" height="100%" width="100%"> -->
+		<img src="resources/images/home/car4.jpg" alt="" height="100%" width="100%">
+		<img src="resources/images/home/car5.jpg" alt="" height="100%" width="100%">
+		<img src="resources/images/home/car6.jpg" alt="" height="100%" width="100%">
+		<img src="resources/images/home/car7.jpg" alt="" height="100%" width="100%">
+	</figure>
+	<nav>
+		<button class="nav prev">Prev</button>
+		<button class="nav next">Next</button>
+	</nav>
+</div>
+
+<style>
+/* new css */
+.carousel {
+	padding: 0px;
+	height: 100%;
+	perspective: 1200px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.carousel > * {
+	flex: 0 0 auto;
+}
+.carousel figure {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+}
+.carousel figure img {
+	opacity: 1;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 0px;
+}
+.carousel figure img:not(:first-of-type) {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.carousel nav {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0 0;
+}
+.carousel nav button {
+	flex: 0 0 auto;
+	margin: 0 5px;
+	cursor: pointer;
+	color: #333;
+	background: none;
+	border: 1px solid;
+	letter-spacing: 1px;
+	padding: 5px 10px;
+}
+</style>
