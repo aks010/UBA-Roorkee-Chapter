@@ -97,7 +97,9 @@
 		AOS.init();
 		init();
 		homeLoad = false
-		loadingHide()
+		$(window).on("load", function(){
+			loadingHide();
+		})
 	</script>
 </body>
 </html>
