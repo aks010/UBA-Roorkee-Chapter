@@ -41,7 +41,12 @@ function loadPage(name){
 			// statements_def
 			break;
 	}
-	loadingHide();
+	if(homeLoad == false){
+		loadingHide();
+	}else{
+		console.log("loading");
+	}
+	
 
 }
 

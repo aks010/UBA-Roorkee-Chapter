@@ -1,5 +1,6 @@
 var prevScrollPos = $(window).scrollTop();
 var lock = false;
+var called = false;
 var carouselInterval;
 
 function carousel(root) {
@@ -108,13 +109,16 @@ function carousel(root) {
 		}
 		
 	}else{
-		$('.navbar-inverse').stop().animate({
+		if($(window).scrollTop()!=0){
+			$('.navbar-inverse').stop().animate({
 			backgroundColor: "#222B31",
 			height: "100px"
 		}, 300)
 		$('.navbar-inverse a').stop().animate({
 			color: "#a3bfc6"
 		}, 300);
+		}
+		
 	}
 }
 
@@ -133,7 +137,6 @@ function unlockLock(){
 	lock = false;
 }
 
-var called = false;
 $(document).on("scroll", function () {
 	if($(window).scrollTop()>0 && $(window).scrollTop()< $(window).height()){
 		lock = true;
@@ -151,6 +154,8 @@ $(document).on("scroll", function () {
 });
 
 adjustPos(prevScrollPos);
+lock = false;
+called= false;
 						
 }
 
