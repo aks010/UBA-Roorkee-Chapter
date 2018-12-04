@@ -23,10 +23,11 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('../images/overlay.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+ background: #282537;
+ background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+ background-image: -moz-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+ background-image: -o-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+ background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
   z-index: -1;
 }
 
@@ -40,6 +41,7 @@ body {
 .text {
   color: #fbae17;
   display: inline-block;
+  font-size:  24px;
   margin-left: 5px;
 }
 
