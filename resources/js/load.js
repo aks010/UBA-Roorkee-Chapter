@@ -52,24 +52,15 @@ function loadPage(name){
 
 function bindFooter(){
 	$('.fa-angle-double-up').on("click", function(){
-		$('.extra').css("height", "200px");
-		$('.collab').show(450);
+		// $('.extra').css("height", "200px");
+		// $('.collab').show(450);
 		$([document.documentElement, document.body]).animate({
-        		scrollTop: $(document).height()
+        		scrollTop: 0
     		}, 500, function(){
     			$([document.documentElement, document.body]).stop();
     		});
-		$('.bottom .fa-angle-double-up').hide();
-		$('.bottom .fa-angle-double-down').show();
-	})
-
-	$('.fa-angle-double-down').on("click", function(){
-		$('.collab').hide(450);
-		$('.extra').animate({
-			height: "0px"
-		})
-		$('.bottom .fa-angle-double-down').hide();
-		$('.bottom .fa-angle-double-up').show();
+		// $('.bottom .fa-angle-double-up').hide();
+		// $('.bottom .fa-angle-double-down').show();
 	})
 }
 

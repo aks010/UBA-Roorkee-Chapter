@@ -62,8 +62,8 @@ html, body{
   margin-top: 116px;
 }
 .navbar-inverse{
-  height: 150px;
-  background:rgba(0,0,0,0.3);
+  height: 100px;
+  background-color: #222B31;
   border-bottom-width: 0px;
   border-bottom-color: #cc3300;
   border-bottom-style: solid;
@@ -105,8 +105,8 @@ nav .nav{
 }
 
   nav a{
-    font:500 11px Lato;
-    letter-spacing:2px;
+    font:700 13px Lato;
+    letter-spacing:1.5px;
     padding:16px;
     color:#a3bfc6;
     text-transform:uppercase;

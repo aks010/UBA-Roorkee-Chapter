@@ -1,64 +1,189 @@
-<div class="carousel">
-	<figure>
-		<img src="resources/images/home/car1.jpg" alt="" height="100%" width="100%">
-		<img src="resources/images/home/car2.jpg" alt="" height="100%" width="100%">
-		<!-- <img src="resources/images/home/car3.png" alt="" height="100%" width="100%"> -->
-		<img src="resources/images/home/car4.jpg" alt="" height="100%" width="100%">
-		<img src="resources/images/home/car5.jpg" alt="" height="100%" width="100%">
-		<img src="resources/images/home/car6.jpg" alt="" height="100%" width="100%">
-		<img src="resources/images/home/car7.jpg" alt="" height="100%" width="100%">
-	</figure>
-	<nav>
-		<button class="nav prev">Prev</button>
-		<button class="nav next">Next</button>
-	</nav>
-</div>
+<div class="car-container">
+	<div class="slideshow-container">
+		<img class="top-uba-logo" src="resources/images/logo.png" height="100"/>
+		<img class="top-iitr-logo" src="resources/images/iitr-logo.png" height="100" width="100" />
 
+		<div class="mySlides">
+			<div class="numbertext">1 / 6</div>
+			
+			<img src="resources/images/home/car1.jpg" width="100%" height="100%" style="width:100%">
+
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">2 / 6</div>
+			<img src="resources/images/home/car2.png" width="100%" height="100%" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">3 / 6</div>
+			<img src="resources/images/home/car3.jpg" width="100%" height="100%" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">4 / 6</div>
+			<img src="resources/images/home/car4.jpg" width="100%" height="100%" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">5 / 6</div>
+			<img src="resources/images/home/car5.jpg" width="100%" height="100%" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<div class="numbertext">6 / 6</div>
+			<img src="resources/images/home/car6.jpg" width="100%" height="100%" style="width:100%">
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		<div class="dot-div" style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+			<span class="dot" onclick="currentSlide(4)"></span> 
+			<span class="dot" onclick="currentSlide(5)"></span> 
+			<span class="dot" onclick="currentSlide(6)"></span> 
+		</div>
+	</div>
+
+	
+</div>
 <style>
-/* new css */
-.carousel {
-	padding: 0px;
-	height: 100%;
-	perspective: 1200px;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.carousel > * {
-	flex: 0 0 auto;
-}
-.carousel figure {
-	margin: 0;
-	height: 100%;
-	width: 100%;
-	transform-style: preserve-3d;
-	transition: transform 0.5s;
-}
-.carousel figure img {
-	opacity: 1;
-	width: 100%;
-	box-sizing: border-box;
-	padding: 0 0px;
-}
-.carousel figure img:not(:first-of-type) {
+.car-container * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.car-container{
 	position: absolute;
-	left: 0;
+	padding: 20px;
+	padding-top: 120px;
+	width: 100%;
+	height: 100%;
+}
+
+.dot-div{
+	position: relative;
+	bottom: 45px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: auto;
+}
+
+.top-uba-logo{
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	opacity: 0.8;
+}
+
+.top-iitr-logo{
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	opacity: 0.8;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	/* width: 100%; */
+	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
 	top: 0;
 }
-.carousel nav {
-	display: flex;
-	justify-content: center;
-	margin: 20px 0 0;
-}
-.carousel nav button {
-	flex: 0 0 auto;
-	margin: 0 5px;
+
+/* The dots/bullets/indicators */
+.dot {
 	cursor: pointer;
-	color: #333;
-	background: none;
-	border: 1px solid;
-	letter-spacing: 1px;
-	padding: 5px 10px;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+.mySlides{
+	width: 100%;
+	height: 100%
+}
+
+.mySlides *{
+	width: 100%;
+	height: 100%
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.prev, .next,.text {font-size: 11px}
 }
 </style>

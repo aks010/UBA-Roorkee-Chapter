@@ -1,14 +1,9 @@
 .par1{
 	    background-image: url("../images/home-about.jpg");
 }
-
-.par2{
-	    background-image: url("../images/home-village.jpg");
-}
 .par3{
 	    background-image: url("../images/home-initiatives.jpg");
 }
-
 .parallax {
     /* The image used */
     position: relative;
@@ -21,6 +16,16 @@
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.initiatives-container{
+	height: 450px;
+	padding-top: 30px;
+		text-align: center;
+	background-image: url('../images/initiatives.jpg');
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -67,4 +72,37 @@
 }
 .map-item .col-md-4{
 	text-align:  center;
+}
+
+.initiatives-container span.heading{
+	font-size: 24px;
+	color: white;
+}
+
+.icon-div{
+	text-align: center;
+	padding: 20px;
+	/* background-color: #fff; */
+}
+
+.icon-div img{
+	border-radius: 20%;
+	/* display: block */
+}
+
+.icon-span{
+	width: 100%;
+	/* background: rgba(0,0,0,0.3); */
+	color: #ffffff;
+	/* font-weight: bold; */
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+.ico-container{
+	margin: auto;
+}
+
+.initiatives-container .heading{
+	letter-spacing: 3px;
 }

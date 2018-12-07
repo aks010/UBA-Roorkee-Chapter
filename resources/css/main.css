@@ -4,22 +4,6 @@
 	font-size: 14px;
 }
 
-.top-uba-logo{
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 9999999999999;
-	opacity: 0.8;
-}
-
-.top-iitr-logo{
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 9999999999999;
-	opacity: 0.8;
-}
-
 footer .social-icons{
 	width: 100%;
 	text-align: center;
@@ -86,7 +70,7 @@ footer .extra{
 	background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-	height: 0px;
+	height: 200px;
 	display: flex;
 	align-items: center;
 }
@@ -108,7 +92,8 @@ footer .collab .mailid{
 }
 
 #uba-content{
+	padding-top: 40px;
 	padding-bottom: 20px;
 	padding-right:  20px;
-	padding-left:  35px;
+	padding-left:  20px;
 }
