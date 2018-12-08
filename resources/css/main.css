@@ -4,6 +4,9 @@
 	font-size: 14px;
 }
 
+#uba-content{
+}
+
 footer .social-icons{
 	width: 100%;
 	text-align: center;
@@ -23,11 +26,12 @@ footer .social-icons .row{
 
 footer .social-icons span.fab{
 	padding: 20px;
+	color: rgb(34, 43,49);
 	font-size: 24px;
 }
 
 footer{
-	background-color: rgb(34, 43, 49);
+	/* background-color: #fff; */
 }
 
 footer .contact-info{
@@ -38,7 +42,7 @@ footer .contact-info{
 	font-size: 13px;
     letter-spacing:1.5px;
     padding:16px;
-    color:#a3bfc6;
+    color:rgb(34, 43, 49);
 	padding-top: 15px;
 	padding-bottom: 20px;
 }
@@ -50,6 +54,7 @@ footer .contact-info span.fa{
 footer .bottom{
 	width: 100%;
 	text-align: center;
+	background-color: rgb(34, 43, 49);
 }
 
 footer .bottom span{
@@ -66,13 +71,10 @@ footer .bottom span{
 }
 
 footer .extra{
-	background-image: url('../images/footer.jpg');
-	background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 	height: 200px;
 	display: flex;
 	align-items: center;
+	background-color: rgb(34, 43, 49);
 }
 
 footer .collab{

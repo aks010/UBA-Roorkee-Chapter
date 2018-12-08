@@ -29,80 +29,74 @@ html, body{
   background-size: cover;
   padding: 30px;
   text-align: center;
-} */
+  } */
 
-.header{
-  height: 100%;
-}
+  .header{
+    height: 100%;
+  }
 
-#navbar {
-  overflow: hidden;
-  z-index: 1000000;
-  position: fixed;
-  width: 100%;
-  top: 0;
-}
+  #navbar {
+    overflow: hidden;
+    z-index: 1000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
 
-.content {
+  .content {
 
-  /* padding: 16px; */
-}
+    /* padding: 16px; */
+  }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
-#uba-content{
-  width: 100%;
-}
+  #uba-content{
+    width: 100%;
+  }
 
-.sticky + #uba-content {
-  margin-top: 116px;
-}
-.navbar-inverse{
-  height: 100px;
-  background-color: #222B31;
-  border-bottom-width: 0px;
-  border-bottom-color: #cc3300;
-  border-bottom-style: solid;
-}
-.navbar-inverse .container{
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
+  .sticky + #uba-content {
+    margin-top: 116px;
+  }
+  .navbar-inverse{
+    height: 100px;
+    background-color: #222B31;
+    border-bottom-width: 0px;
+    border-bottom-color: #cc3300;
+    border-bottom-style: solid;
+  }
+  .navbar-inverse .container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 80px;
+    width: 100%;
+  }
 
-.navbar-inverse .container .collapse{
-  margin: auto;
-}
+  .navbar-inverse .container .collapse{
+    margin: auto;
+  }
 
-nav .navbar-brand{
-  font:12px Lato;
-  text-transform:uppercase;
-  color:#FFF;
-  letter-spacing:2px;
-  margin-top:2px;
-}
+  .navbar{
+    margin-bottom: 0px;
+  }
 
-.navbar{
-  margin-bottom: 0px;
-}
+  nav .nav{
+    margin-bottom:0px;
+  }
 
-nav .nav{
-  margin-bottom:0px;
-}
+  .navbar-nav{
+    margin:  0 auto;
+    float: none;
+    display: table;
+  }
 
-.navbar-nav{
-  margin:  0 auto;
-  float: none;
-  display: table;
-}
-
-.navbar-inverse .navbar-nav > li > a{
-  color: #ffffff;
-}
+  .navbar-inverse .navbar-nav > li > a{
+    color: #ffffff;
+  }
 
   nav a{
     font:700 13px Lato;
@@ -120,59 +114,83 @@ nav .nav{
     position:relative;
   }
 
-.navbar-inverse .navbar-toggle{
-  border:none;
-}
-
-.navbar-header{
-  display: none;
-}
-
-nav .navbar-collapse{
-  box-shadow:none;
-}
-
-.navbar-inverse .navbar-toggle:hover{
-  background:transparent;
-}
-
-.navbar-inverse .navbar-toggle:focus{
-  background:transparent;
-}
-
-.navbar-inverse .navbar-toggle:active{
-  background:transparent;
-}
-
-nav .icon-bar{
-  background:#a3bfc6;
-}
-
-nav .hover{
-  display:block;
-  border-radius: 15px;
-  position:absolute;
-  width:0%;
-  height:100%;
-  top:0px;
-  left:0px;
-  background:#cc3300;
-  z-index:0;
-  opacity:0;
-}
-
-@media (max-width: 767px) {
-  nav .nav{
-    padding-bottom:20px;
+  .navbar-inverse .navbar-toggle{
+    border:none;
   }
+
+  .navbar-header{
+
+  }
+
+  .navbar-brand{
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+  }
+
+  .navbar-brand span{
+    font-size: 32px;
+    color: white;
+    font-family: "Architects Daughter";
+    text-shadow: 2px 2px 2px #ffffff
+  }
+
+  .navbar-brand span:nth-child(1){
+    color:  #ff3333;
+  }
+
+   .navbar-brand span:nth-child(2){
+    color:  #009933;
+  }
+
+   .navbar-brand span:nth-child(3){
+    color:  #0066cc;
+  }
+
+  nav .navbar-collapse{
+    box-shadow:none;
+  }
+
+  .navbar-inverse .navbar-toggle:hover{
+    background:transparent;
+  }
+
+  .navbar-inverse .navbar-toggle:focus{
+    background:transparent;
+  }
+
+  .navbar-inverse .navbar-toggle:active{
+    background:transparent;
+  }
+
+  nav .icon-bar{
+    background:#a3bfc6;
+  }
+
+  nav .hover{
+    display:block;
+    border-radius: 15px;
+    position:absolute;
+    width:0%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background:#cc3300;
+    z-index:0;
+    opacity:0;
+  }
+
+  @media (max-width: 767px) {
+    nav .nav{
+      padding-bottom:20px;
+    }
     nav a{
       padding:12px;
     }
-  
-}
 
-@media (max-width: 480px) {
-  nav .nav{
-    padding-bottom:20px;
   }
-}
+
+  @media (max-width: 480px) {
+    nav .nav{
+      padding-bottom:20px;
+    }
+  }
