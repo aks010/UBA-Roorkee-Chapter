@@ -1,8 +1,15 @@
 .par1{
 	    background-image: url("../images/home-about.jpg");
 }
+
+.par2{
+	    background-image: url("../images/home-history.jpg");
+}
 .par3{
 	    background-image: url("../images/home-initiatives.jpg");
+}
+.par4{
+	    background-image: url("../images/home-goals.jpg");
 }
 .parallax {
     /* The image used */
