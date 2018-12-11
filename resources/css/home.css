@@ -21,7 +21,6 @@
 }
 
 .initiatives-container{
-	height: 450px;
 	padding-top: 30px;
 		text-align: center;
 	background-image: url('../images/initiatives.jpg');
@@ -46,6 +45,10 @@
 .parallax-text{
 	padding-top: 25px;
 	padding-bottom: 25px;
+}
+
+.parallax-text p{
+	text-align: justify;
 }
 
 .content .heading span{
@@ -101,6 +104,16 @@
 
 .ico-container{
 	margin: auto;
+}
+
+.ico-container button{
+	height: 100px;
+	width: 100px;
+}
+
+.ico-container button span{
+	font-size: 60px;
+	color: black;
 }
 
 .initiatives-container .heading{
