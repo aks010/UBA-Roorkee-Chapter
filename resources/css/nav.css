@@ -62,7 +62,7 @@ html, body{
     margin-top: 116px;
   }
   .navbar-inverse{
-    height: 100px;
+    /* height: 100px; */
     background-color: #222B31;
     border-bottom-width: 0px;
     border-bottom-color: #cc3300;
@@ -172,12 +172,18 @@ html, body{
     opacity:0;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 1237px) {
     nav .nav{
       padding-bottom:20px;
     }
     nav a{
-      padding:12px;
+      font:400 10px Lato;
+    letter-spacing:1.5px;
+    padding:12px;
+    color:#a3bfc6;
+    text-transform:uppercase;
+    position:relative;
+    z-index:1000;
     }
 
   }
@@ -187,3 +193,18 @@ html, body{
       padding-bottom:20px;
     }
   }
+
+@media (min-width: 768px) and (max-width: 1124px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}
