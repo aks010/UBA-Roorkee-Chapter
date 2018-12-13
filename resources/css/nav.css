@@ -70,7 +70,6 @@ html, body{
   }
   .navbar-inverse .container{
     height: 100%;
-    padding-left: 80px;
     width: 100%;
   }
 
@@ -119,6 +118,7 @@ html, body{
 
   .navbar-header{
     padding-top: 18px;
+    padding-left: 80px;
   }
 
   .navbar-brand{
@@ -131,7 +131,8 @@ html, body{
     letter-spacing: 0px;
     font-family: "Garamond";
     padding-bottom: 0px;
-    line-height: 26px;
+    line-height: 32px;
+    transform: scale(1.2, 1.5)
   }
 
   .navbar-brand .row:nth-child(2){
@@ -141,6 +142,7 @@ html, body{
 
   nav .navbar-collapse{
     box-shadow:none;
+    padding-left: 70px;
   }
 
   .navbar-inverse .navbar-toggle:hover{
@@ -194,8 +196,9 @@ html, body{
     }
   }
 
-@media (min-width: 768px) and (max-width: 1124px) {
+@media (min-width: 0px) and (max-width: 1124px) {
     .navbar-collapse.collapse {
+      border-top: 1px solid rgb(16,16,16);
         display: none !important;
     }
     .navbar-collapse.collapse.in {
@@ -206,5 +209,11 @@ html, body{
     }
     .navbar-header {
         float:none;
+    }
+    nav li, .navbar-form{
+      float: none !important;
+    }
+    .navbar-nav{
+      padding-right: 180px;
     }
 }
