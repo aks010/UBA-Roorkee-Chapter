@@ -1,0 +1,332 @@
+<!-- This here is the modal -->
+<div class="modal fade" id="myModal" role="dialog" data-name="">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <div class="qualifications col-md-5">
+          <div class="to-center">
+            <div class="line"></div>
+            <div class="tile-outer">
+              <i class="fas fa-lightbulb"></i>
+              <div class="tile">
+                <h4>Heading</h4>
+                <p>This is a text and this is othing, I just wanted to see what was going on </p> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default col-md-7">
+  <div class="panel-heading"></div>
+  <div class="panel-body"></div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper container row">
+ <div class="flip-card col-md-4">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="background-image: url('resources/images/initiatives/awareness.jpg')">
+    	<div class="heading">AWARENESS</div>
+    </div>
+    <div class="flip-card-back">
+      <h1>AWARENESS</h1>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('awareness')">Open Large Modal</button>
+    </div>
+  </div>
+</div> 
+<div class="flip-card col-md-4">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="background-image: url('resources/images/initiatives/agriculture.jpg')">
+      <div class="heading">AGRICULTURE</div>
+    </div>
+    <div class="flip-card-back">
+      <h1>AGRICULTURE</h1>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('agriculture')">Open Large Modal</button>
+    </div>
+  </div>
+</div> 
+<div class="flip-card col-md-4">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="background-image: url('resources/images/initiatives/education.jpg')">
+      <div class="heading">EDUCATION</div>
+    </div>
+    <div class="flip-card-back">
+      <h1>EDUCATION</h1>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('education')">Open Large Modal</button>
+    </div>
+  </div>
+</div> 
+<div class="flip-card col-md-4">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="background-image: url('resources/images/initiatives/employment.jpg')">
+      <div class="heading">EMPLOYMENT GENERATION</div>
+    </div>
+    <div class="flip-card-back">
+      <h1>EMPLOYMENT GENERATION</h1>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('employment')">Open Large Modal</button>
+    </div>
+  </div>
+</div> 
+<div class="flip-card col-md-4">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="background-image: url('resources/images/initiatives/health.jpg')">
+      <div class="heading">HEALTH</div>
+    </div>
+    <div class="flip-card-back">
+      <h1>HEALTH</h1>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('health')">Open Large Modal</button>
+    </div>
+  </div>
+</div> 
+<div class="flip-card col-md-4">
+  <div class="flip-card-inner">
+    <div class="flip-card-front" style="background-image: url('resources/images/initiatives/other-initiative.jpg')">
+      <div class="heading">OTHER INITIATIVES</div>
+    </div>
+    <div class="flip-card-back">
+      <h1>OTHER INITIATIVES</h1>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('other')">Open Large Modal</button>
+    </div>
+  </div>
+</div> 
+</div>
+
+<script>
+  function populateModal(name){
+    var myObj = initiatives[name]
+    $('#myModal').attr('data-name', name);
+    $('.modal-title').text(myObj["heading"])
+    $('.to-center').html('');
+    var centerHTML = ''
+    centerHTML += '<div class="line"></div>';
+    $.each(myObj["content"], function(index, value){
+      centerHTML+= '<div class="tile-outer" onclick="ShowData('+index+')">'+
+              // '<i class="'+value["icon"]+'"></i>'+
+              '<span class="fa-stack" style="vertical-align: top;">  <i class="far fa-circle fa-stack-2x fa-3x"></i>  <i class="'+value["icon"]+' fa-stack-1x"></i></span>'+
+              '<div class="tile"><p>'+value["heading"]+'</p></div>'+
+               // '<p>'+value["text"]+'</p>'+
+              '</div>';
+    })
+    centerHTML+= '</div>';
+    $('.to-center').html(centerHTML);
+    ShowData(0)
+    // $('.modal-content').css("background-image", "url('resources/images/initiatives/"+myObj["backgroundImage"]+"')");
+
+  }
+
+  function ShowData(num){
+    var name = $('#myModal').attr('data-name');
+    $('.panel-heading').fadeOut(150, function() {
+      $(this).text(initiatives[name]["content"][num]["heading"]).fadeIn(150)
+    });
+
+    $('.panel-body').fadeOut(150, function() {
+      $(this).text(initiatives[name]["content"][num]["text"]).fadeIn(150)
+    });
+  }
+</script>
+
+
+
+<style>
+
+.wrapper{
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.line {
+  position: absolute;
+  top: 15px;
+  width: 5px;
+  min-height: 100%;
+  background: #e7262b;
+  margin: 0 0 0 35px;
+  -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+.panel-default{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.modal-title{
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+
+.qualifications {
+  position: relative;
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: center; /* Safari 7.0+ */
+  display: flex;
+  align-items: center;
+}
+
+.qualifications .to-center{
+  margin-left: 0px;
+}
+
+.modal-content{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tile-outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0 0 20px;
+}
+
+.tile {
+  position: relative;
+  z-index: 10000009;
+  background: #e7262b;
+  color: #ffffff;
+  padding: 10px 15px;
+  margin: 0 0 0 30px;
+  /*width:100%;*/
+  -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+.tile p {
+  margin: 0;
+}
+
+.tile:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: #e7262b;
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: -15px;
+  z-index: -1;
+  -webkit-transform: rotate(-45deg); /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  transform: rotate(-45deg); /* Firefox 16+, IE 10+, Opera */
+}
+
+.tile-outer i.far, .tile-outer i.fas  {
+  /* height: 4vw; */
+  /* width: 4vw; */
+  /* position: relative; */
+  /* padding:  15px 10px 10px 17px; */
+  /* font-size: 20px; */
+  color: #e7262b;
+  /* border: 3px solid red; */
+  /* border-radius: 50%; */
+  z-index:  99999999;
+  /* background-color: white; */
+}
+
+.tile-outer .fa-stack{
+    margin: 10px 10px 14px -1px;
+  background-color: white;
+}
+
+.modal-dialog{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+
+}
+
+.modal-content{
+  height: 100%;
+}
+
+.modal-body{
+  height: calc(100% - 139px);
+  overflow-y: scroll;
+}
+
+#myModal{
+  z-index: 9999999;
+}
+
+.content{
+  padding-top: 100px;
+}
+.flip-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: transparent;
+  height: 300px;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  opacity: 0.65;
+}
+
+.flip-card-front .heading{
+	font-size: 24px;
+	color: #ffffff;
+	position: relative;
+	top: 47%;
+	width: 100%;
+	letter-spacing: 5px;
+	text-align: center;
+	background-color: rgba(51,51,51,0.65);
+}
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  padding-left: 10px;
+  overflow-y: scroll;
+}
+
+.flip-card-back button{
+	width: 100%;
+}
+</style>

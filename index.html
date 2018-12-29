@@ -15,6 +15,8 @@
 	<!-- textiliate includes -->
 	<link rel="stylesheet" href="vendors/aos/aos.css" />
 
+	<link rel="stylesheet" href="vendors/animate.css" />
+
 	<!-- font awesome includes -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -57,14 +59,14 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" ><div class="row">UBA</div><div class="row">IIT Roorkee
+					<a class="navbar-brand" onclick="loadPage('home')"><div class="row">UBA</div><div class="row">IIT Roorkee
 					</div></a></div>
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li class="approach" ><a onclick="loadingShow()">APPROACH</a><span class="hover"></span></li>
-							<li class="villages" ><a >VIllAGES</a><span class="hover"></span></li>
-							<li class="initiatives" ><a>INITIATIVES</a><span class="hover"></span></li>
+							<li class="villages" ><a onclick="loadPage('villages')">VIllAGES</a><span class="hover"></span></li>
+							<li class="initiatives" ><a onclick="loadPage('initiatives')">INITIATIVES</a><span class="hover"></span></li>
 							<li class="incampus-events" ><a>IN-CAMPUS EVENTS</a><span class="hover"></span></li>
 							<li class="student-team" ><a>STUDENT TEAM</a><span class="hover"></span></li>
 							<li class="winter-school" ><a>In News</a><span class="hover"></span></li>
