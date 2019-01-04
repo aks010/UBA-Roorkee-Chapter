@@ -89,7 +89,7 @@ html, body{
   .navbar-nav{
     margin:  0 auto;
     float: none;
-    padding-left: 100px;
+    padding-left: 75px;
   }
 
   .navbar-inverse .navbar-nav > li > a{
@@ -128,7 +128,7 @@ html, body{
 
   .navbar-brand .row:nth-child(1){
     font-size: 28px;
-    letter-spacing: 10px;
+    letter-spacing: 1px;
     font-family: "Garamond";
     padding-bottom: 0px;
     line-height: 32px;
@@ -137,7 +137,7 @@ html, body{
 
   .navbar-brand .row:nth-child(2){
     font-size: 10px;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
   }
 
   nav .navbar-collapse{

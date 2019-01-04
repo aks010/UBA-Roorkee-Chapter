@@ -1,64 +1,147 @@
-<div class="wrapper">
- <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>Awareness</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
+<div class="village-content">
+  <div class="village-div" data-village-id="MRPR">
+    <div class="village-image" style="background-image: url('resources/images/villages/meerpur-main.jpg')">
+      <div class="title-bar"><span style="float: left">Meerpur</span><span style="float: right">Haridwar</span></div>
+      <div class="image-overlay"><div class="image-text"><h3>MEERPUR</h3><p>Located in Bahadrabad block, Haridwar, Uttrakhand</p></div></div>
     </div>
   </div>
-</div> 
+  <div class="village-div" data-village-id="CHPR">
+    <div class="village-image" style="background-image: url('resources/images/villages/chandpur-main.jpg')">
+      <div class="title-bar"><span style="float: left">Chandpur</span><span style="float: right">Dehradun</span></div>
+      <div class="image-overlay"><div class="image-text"><h3>CHANDPUR</h3><p>Located in Vikasnagar block, Dehradun, Uttrakhand</p></div></div>
     </div>
+  </div>
+  <div class="village-div" data-village-id="CHRB">
+    <div class="village-image" style="background-image: url('resources/images/villages/chharba-main.jpg')">
+      <div class="title-bar"><span style="float: left">Chharba</span><span style="float: right">Dehradun</span></div>
+      <div class="image-overlay"><div class="image-text"><h3>CHHARBA</h3><p>Located in Vikasnagar block, Dehradun, Uttrakhand</p></div></div>
+    </div>
+  </div>
+  <div class="village-div" data-village-id="BLDI">
+    <div class="village-image" style="background-image: url('resources/images/villages/beladi-main.jpg')">
+      <div class="title-bar"><span style="float: left">Beladi</span><span style="float: right">Haridwar</span></div>
+      <div class="image-overlay"><div class="image-text"><h3>BELADI SALHAPUR</h3><p>Located in Roorkee block,<br> Haridwar, Uttrakhand</p></div></div>
+    </div>
+  </div>
+  <div class="village-div" data-village-id="PRPR">
+    <div class="village-image" style="background-image: url('resources/images/villages/puranpur-main.jpg')">
+     <div class="title-bar"><span style="float: left">Puranpur</span><span style="float: right">Saharanpur</span></div>
+     <div class="image-overlay"><div class="image-text"><h3>PURANPUR</h3><p>Located in Muzzaffarbad block, Saharanpur, Uttrakhand</p></div></div>
+   </div>
+ </div>
+</div>
 
+<div class="village-detail"></div>
+
+<script>
+  $('.village-div').on("click", function(){
+    var id = $(this).attr('data-village-id');
+    $('.village-content').hide();
+    $('.village-detail').html('');
+    switch (id) {
+      case "MRPR":
+        $('.village-detail').load('components/villages/meerpur.html');
+        break;
+      case "CHPR":
+        $('.village-detail').load('components/villages/chandpur.html');
+        break;
+      case "CHRB":
+        $('.village-detail').load('components/villages/chharba.html');
+        break;
+      case "BLDI":
+        $('.village-detail').load('components/villages/beladi.html');
+        break;
+      case "PRPR":
+        $('.village-detail').load('components/villages/puranpur.html');
+        break;
+      default:
+        // statements_def
+        break;
+    }
+    $('.village-detail').show();
+  })
+</script>
 
 <style>
- .content{
-    padding-top: 100px;
- }
- .flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 400px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+.village-detail{
+  display: none;
 }
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
+.village-content{
+  /* padding-top: 100px; */
+  height: 80vh;
   width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
 }
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.image-overlay{
+  bottom: 0;
   position: absolute;
+  z-index: 100;
+  height: 0%;
   width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+  transition: 1s ease;
+  background-image: linear-gradient(to bottom right, rgba(0, 47, 75, 0.3),rgba(220, 66, 37, 0.65));
 }
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: dodgerblue;
+.image-text{
+  padding-top: 30px;
   color: white;
-  transform: rotateY(180deg);
+  text-align: center;
+}
+.title-bar{
+  top: calc(100% - 40px);
+  position: relative;
+  height: 40px;
+  width: 100%;
+  background-color: rgba(200, 200, 200, 0.8);
+  padding: 10px 10px;
+  transition: 0.4s ease;
+}
+.image-text{
+  display: none;
+}
+.image-text h3{
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+#uba-content{
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
+.village-div{
+  width: 20%;
+  display: table-cell;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+.village-image{
+  cursor: pointer;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  height: 100%;
+}
+.village-content{
+  padding: 30px;
+  overflow: hidden;
+  display: table;
+}
+.village-image:hover{
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+}
+
+.village-image:hover .image-overlay{
+  height: 100%;
+}
+
+.village-image:hover .title-bar{
+  opacity: 0;
+}
+
+.village-image:hover .image-text{
+  display: block;
 }
 </style>
