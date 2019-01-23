@@ -22,6 +22,31 @@ html, body{
   /* float:  right; */
 }
 
+ul.nav li {
+  transition: 0.3s ease;
+  /* background: #3fa46a; */
+  color: #f2f2f2;
+  font-size: 20px;
+  text-decoration: none;
+  border-top: 4px solid #222B31;
+  border-bottom: 4px solid #222B31;
+  padding: 20px 0;
+  margin: 15px 8px;
+}
+ul.nav li:hover {
+  color:  #ffffff;
+  margin-top: 30px;
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding: 6px 0; 
+}
+ul.nav li a{
+  padding-top:  4px;
+  padding-bottom: 4px;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
 /* .header {
   background-image: url("../images/back.jpg");
   background-position: center;
@@ -75,7 +100,7 @@ html, body{
 
   .navbar-inverse .container .collapse{
     margin: auto;
-    padding-top: 25px;
+    /* padding-top: 25px; */
   }
 
   .navbar{
@@ -90,10 +115,6 @@ html, body{
     margin:  0 auto;
     float: none;
     padding-left: 75px;
-  }
-
-  .navbar-inverse .navbar-nav > li > a{
-    color: #ffffff;
   }
 
   nav a{
@@ -124,6 +145,9 @@ html, body{
   .navbar-brand{
     margin-bottom: 30px;
     
+  }
+  .navbar-form{
+    margin-top: 32px;
   }
 
   .navbar-brand .row:nth-child(1){
@@ -174,7 +198,7 @@ html, body{
     opacity:0;
   }
 
-  @media (max-width: 1237px) {
+  @media (max-width: 1286px) {
     nav .nav{
       padding-bottom:20px;
     }
@@ -196,7 +220,7 @@ html, body{
     }
   }
 
-@media (min-width: 0px) and (max-width: 1124px) {
+@media (min-width: 0px) and (max-width: 1154px) {
     .navbar-collapse.collapse {
       border-top: 1px solid rgb(16,16,16);
         display: none !important;
