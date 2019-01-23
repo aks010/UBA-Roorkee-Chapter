@@ -38,20 +38,12 @@
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/awareness.jpg')">
     	<div class="heading">AWARENESS</div>
     </div>
-    <div class="flip-card-back">
-      <h1>AWARENESS</h1>
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('awareness')">Open Large Modal</button>
-    </div>
   </div>
 </div> 
 <div class="flip-card col-md-4">
   <div class="flip-card-inner">
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/agriculture.jpg')">
       <div class="heading">AGRICULTURE</div>
-    </div>
-    <div class="flip-card-back">
-      <h1>AGRICULTURE</h1>
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('agriculture')">Open Large Modal</button>
     </div>
   </div>
 </div> 
@@ -60,20 +52,12 @@
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/education.jpg')">
       <div class="heading">EDUCATION</div>
     </div>
-    <div class="flip-card-back">
-      <h1>EDUCATION</h1>
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('education')">Open Large Modal</button>
-    </div>
   </div>
 </div> 
 <div class="flip-card col-md-4">
   <div class="flip-card-inner">
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/employment.jpg')">
       <div class="heading">EMPLOYMENT GENERATION</div>
-    </div>
-    <div class="flip-card-back">
-      <h1>EMPLOYMENT GENERATION</h1>
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('employment')">Open Large Modal</button>
     </div>
   </div>
 </div> 
@@ -82,10 +66,6 @@
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/health.jpg')">
       <div class="heading">HEALTH</div>
     </div>
-    <div class="flip-card-back">
-      <h1>HEALTH</h1>
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('health')">Open Large Modal</button>
-    </div>
   </div>
 </div> 
 <div class="flip-card col-md-4">
@@ -93,13 +73,11 @@
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/other-initiative.jpg')">
       <div class="heading">OTHER INITIATIVES</div>
     </div>
-    <div class="flip-card-back">
-      <h1>OTHER INITIATIVES</h1>
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('other')">Open Large Modal</button>
-    </div>
   </div>
 </div> 
 </div>
+
+<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('other')">Open Large Modal</button> -->
 
 <script>
   function populateModal(name){
@@ -282,15 +260,11 @@
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+   opacity: 0.65;
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -304,7 +278,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: black;
-  opacity: 0.65;
 }
 
 .flip-card-front .heading{
@@ -318,16 +291,46 @@
 	text-align: center;
 	background-color: rgba(51,51,51,0.65);
 }
-/* Style the back side */
-.flip-card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-  padding-left: 10px;
-  overflow-y: scroll;
+
+
+
+.flip-card-inner
+{
+-webkit-box-shadow: 0 28px 16px -26px black;
+-moz-box-shadow: 0 28px 16px -26px black;
+box-shadow: 0 28px 16px -26px black;
 }
 
-.flip-card-back button{
-	width: 100%;
+.flip-card-inner:hover
+{
+transform:scale(1.1);
+-webkit-transform:scale(1.1);
+-moz-transform:scale(1.1);
+-ms-transform:scale(1.1);
+-o-transform:scale(1.1);
+
+-webkit-box-shadow: 0 58px 36px -56px black;
+-moz-box-shadow: 0 58px 36px -56px black;
+box-shadow: 0 58px 36px -56px black;
+opacity: 1;
+}
+
+.flip-card-inner
+{
+transition:all .6s ease-in-out;
+-webkit-transition:all .6s ease-in-out;
+-moz-transition:all .6s ease-in-out;
+-ms-transition:all .6s ease-in-out;
+-o-transition:all .6s ease-in-out;
+}
+
+.flip-card-inner:hover
+{
+transition:all .6s ease-in-out;
+-webkit-transition:all .6s ease-in-out;
+-moz-transition:all .6s ease-in-out;
+-ms-transition:all .6s ease-in-out;
+-o-transition:all .6s ease-in-out;
+opacity: 1;
 }
 </style>
