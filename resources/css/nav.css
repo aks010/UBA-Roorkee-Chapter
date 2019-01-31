@@ -22,7 +22,7 @@ html, body{
   /* float:  right; */
 }
 
-ul.nav li {
+#navbar ul.nav li {
   transition: 0.3s ease;
   /* background: #3fa46a; */
   color: #f2f2f2;
@@ -33,14 +33,14 @@ ul.nav li {
   padding: 20px 0;
   margin: 15px 8px;
 }
-ul.nav li:hover {
+#navbar ul.nav li:hover {
   color:  #ffffff;
   margin-top: 30px;
   border-top: 4px solid #ffffff;
   border-bottom: 4px solid #ffffff;
   padding: 6px 0; 
 }
-ul.nav li a{
+#navbar ul.nav li a{
   padding-top:  4px;
   padding-bottom: 4px;
   padding-right: 4px;
@@ -86,38 +86,38 @@ ul.nav li a{
   .sticky + #uba-content {
     margin-top: 116px;
   }
-  .navbar-inverse{
+  #navbar .navbar-inverse{
     /* height: 100px; */
     background-color: #1c1c1c;
     border-bottom-width: 0px;
     border-bottom-color: #cc3300;
     border-bottom-style: solid;
   }
-  .navbar-inverse .container{
+  #navbar .navbar-inverse .container{
     height: 100%;
     width: 100%;
   }
 
-  .navbar-inverse .container .collapse{
+  #navbar .navbar-inverse .container .collapse{
     margin: auto;
     /* padding-top: 25px; */
   }
 
-  .navbar{
+  #navbar .navbar{
     margin-bottom: 0px;
   }
 
-  nav .nav{
+  #navbar nav .nav{
     margin-bottom:0px;
   }
 
-  .navbar-nav{
+  #navbar .navbar-nav{
     margin:  0 auto;
     float: none;
     padding-left: 120px;
   }
 
-  nav a{
+  #navbar nav a{
     font:700 13px Lato;
     letter-spacing:1.5px;
     padding:16px;
@@ -126,10 +126,10 @@ ul.nav li a{
     position:relative;
     z-index:1000;
   }
-  nav a:hover{
+  #navbar nav a:hover{
     color:#FFF;
   }
-  nav li{
+  #navbar nav li{
     position:relative;
   }
 
@@ -164,7 +164,7 @@ ul.nav li a{
     letter-spacing: 2px;
   }
 
-  nav .navbar-collapse{
+  #navbar nav .navbar-collapse{
     box-shadow:none;
     padding-left: 70px;
   }
@@ -181,11 +181,11 @@ ul.nav li a{
     background:transparent;
   }
 
-  nav .icon-bar{
+  #navbar nav .icon-bar{
     background:#a3bfc6;
   }
 
-  nav .hover{
+  #navbar nav .hover{
     display:block;
     border-radius: 15px;
     position:absolute;
@@ -199,10 +199,10 @@ ul.nav li a{
   }
 
   @media (max-width: 1286px) {
-    nav .nav{
+    #navbar nav .nav{
       padding-bottom:20px;
     }
-    nav a{
+    #navbar nav a{
       font:400 10px Lato;
     letter-spacing:1.5px;
     padding:12px;
@@ -215,7 +215,7 @@ ul.nav li a{
   }
 
   @media (max-width: 480px) {
-    nav .nav{
+    #navbar nav .nav{
       padding-bottom:20px;
     }
   }
@@ -234,7 +234,7 @@ ul.nav li a{
     .navbar-header {
         float:none;
     }
-    nav li, .navbar-form{
+    #navbar nav li, .navbar-form{
       float: none !important;
     }
     .navbar-nav{
