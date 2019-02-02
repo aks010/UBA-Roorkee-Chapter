@@ -28,13 +28,16 @@
 }
 
 .initiatives-container{
-	padding-top: 30px;
 	margin-bottom: 50px;
 		text-align: center;
-	background-image: url('../images/initiatives.jpg');
+	/* background-image: url('../images/initiatives.jpg'); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .parallax span{
@@ -87,7 +90,15 @@
 
 .initiatives-container span.heading{
 	font-size: 24px;
-	color: white;
+	color: black;
+}
+
+.initiative-icon{
+	transition: box-shadow .3s;
+}
+
+.initiative-icon:hover{
+	box-shadow: 5px 10px 8px rgba(33,33,33,.2);
 }
 
 .icon-div{
@@ -126,4 +137,8 @@
 
 .initiatives-container .heading{
 	letter-spacing: 3px;
+}
+
+.initiatives-container .row{
+	padding-top: 25px;
 }
