@@ -28,16 +28,26 @@
 }
 
 .initiatives-container{
+	position: relative;
+	padding-top: 30px;
 	margin-bottom: 50px;
 		text-align: center;
-	/* background-image: url('../images/initiatives.jpg'); */
-    background-position: center center;
+}
+.initiatives-container::before{
+	content:  "";
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: .5; 
+	background-image: url('../images/initiatives.jpg');
+    background-position: top center;
+    background-attachment: fixed;
+    opacity: 0.65;
     background-repeat: no-repeat;
     background-size: cover;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    padding-bottom: 15px;
-    padding-top: 15px;
 }
 
 .parallax span{
@@ -90,15 +100,10 @@
 
 .initiatives-container span.heading{
 	font-size: 24px;
-	color: black;
-}
-
-.initiative-icon{
-	transition: box-shadow .3s;
-}
-
-.initiative-icon:hover{
-	box-shadow: 5px 10px 8px rgba(33,33,33,.2);
+	color: white;
+	width: 100%;
+	background-color: rgba(51,51,51,0.45);
+	display: block;
 }
 
 .icon-div{
@@ -116,6 +121,8 @@
 	width: 100%;
 	/* background: rgba(0,0,0,0.3); */
 	color: #ffffff;
+	letter-spacing: 1px;
+	font-weight: bold;
 	/* font-weight: bold; */
 	text-transform: uppercase;
 	margin-top: 10px;
@@ -137,8 +144,4 @@
 
 .initiatives-container .heading{
 	letter-spacing: 3px;
-}
-
-.initiatives-container .row{
-	padding-top: 25px;
 }
