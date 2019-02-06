@@ -114,7 +114,7 @@ html, body{
   #navbar .navbar-nav{
     margin:  0 auto;
     float: none;
-    padding-left: 120px;
+    padding-left: 95px;
   }
 
   #navbar nav a{
@@ -213,26 +213,34 @@ html, body{
     }
 
   }
- */
+  */
   @media (max-width: 480px) {
     #navbar nav .nav{
       padding-bottom:20px;
     }
   }
+  @media (min-width: 1182px) and (max-width: 1306px) {
+    #navbar nav a{
+      font:700 11px Lato;
+    }
+    #navbar .navbar-nav{
+      padding-left: 60px;
+    }
+  }
 
-@media (min-width: 0px) and (max-width: 1330px) {
+  @media (min-width: 0px) and (max-width: 1182px) {
     .navbar-collapse.collapse {
       border-top: 1px solid rgb(16,16,16);
-        display: none !important;
+      display: none !important;
     }
     .navbar-collapse.collapse.in {
-        display: block !important;
+      display: block !important;
     }
     .navbar-header .collapse, .navbar-toggle {
-        display:block !important;
+      display:block !important;
     }
     .navbar-header {
-        float:none;
+      float:none;
     }
     #navbar nav li, .navbar-form{
       float: none !important;
@@ -240,4 +248,4 @@ html, body{
     .navbar-nav{
       padding-right: 180px;
     }
-}
+  }
