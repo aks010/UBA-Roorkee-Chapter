@@ -1,58 +1,58 @@
 <div class="wrapper container row">
  <div class="flip-card col-md-4">
-  <div class="flip-card-inner" data-init="awareness">
+  <div class="flip-card-inner" data-init="Beladi_Salhapur">
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/awareness.jpg')">
-    	<div class="heading">AWARENESS</div>
+    	<div class="heading">Beladi Salhapur</div>
     </div>
   </div>
 </div> 
 <div class="flip-card col-md-4">
-  <div class="flip-card-inner" data-init="agriculture">
+  <div class="flip-card-inner" data-init="Chandpur">
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/agriculture.jpg')">
-      <div class="heading">AGRICULTURE</div>
+      <div class="heading">Chandpur</div>
     </div>
   </div>
 </div> 
 <div class="flip-card col-md-4">
-  <div class="flip-card-inner" data-init="education">
+  <div class="flip-card-inner" data-init="Charbba">
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/education.jpg')">
-      <div class="heading">EDUCATION</div>
+      <div class="heading">Charbba</div>
     </div>
   </div>
 </div> 
 <div class="flip-card col-md-4">
-  <div class="flip-card-inner" data-init="employment">
+  <div class="flip-card-inner" data-init="Meerpur">
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/employment.jpg')">
-      <div class="heading">EMPLOYMENT GENERATION</div>
+      <div class="heading">Meerpur</div>
     </div>
   </div>
 </div> 
 <div class="flip-card col-md-4">
-  <div class="flip-card-inner" data-init="health">
+  <div class="flip-card-inner" data-init="Puranpur">
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/health.jpg')">
-      <div class="heading">HEALTH</div>
+      <div class="heading">Puranpur</div>
     </div>
   </div>
 </div> 
-<div class="flip-card col-md-4">
+<!-- <div class="flip-card col-md-4">
   <div class="flip-card-inner" data-init="other">
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/other-initiative.jpg')">
       <div class="heading">OTHER INITIATIVES</div>
     </div>
   </div>
-</div> 
+</div>  -->
 </div>
 
 <div id="initiativeDetail">
   <div class="row">
-    <div class="form-group col-md-3">
+    <!-- <div class="form-group col-md-3">
       <label for="village">Select a village</label>
       <select class="form-control" id="village">
 
       </select>
-    </div>
-    <div class="col-md-6"></div>
-    <div class="form-group col-md-3">
+    </div> -->
+    <!-- <div class="col-md-6"></div> -->
+    <div class="form-group col-md-12">
       <label for="event">Select an event</label>
       <select class="form-control" id="event">
 
@@ -64,7 +64,70 @@
 
 <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('other')">Open Large Modal</button> -->
 
+
+
 <script>
+  var initiative = ""
+  function hook(){
+    var event_html = "";
+    $.each(initiatives[village], function(index, data){
+      event_html += "<option value='"+index+"'>"+data["title"]+"</option>";
+    })
+    $('#event').html(event_html);
+    // hookVillages();
+    hookEvents();
+  }
+  // function hookVillages(){
+  //   $('#village').on("change", function(){
+  //     var event_html = "";
+  //     $('#event').html('');
+  //     var village = $('#village').val();
+  //     $.each(initiatives[village][initiative], function(index, data){
+  //       event_html += "<option value='"+index+"'>"+data["title"]+"</option>"
+  //     console.log(data)
+
+  //     })
+  //     $('#event').html(event_html);
+  //   })
+  //   $('#village').trigger("change");
+  //   hookEvents();
+  // }
+  function hookEvents(){
+    $('#event').on("change", function(){
+      $('#eventDetailDiv').load(initiatives[village][$('#event').val()]["html"]);
+    })
+    $('#event').trigger('change');
+  }
+
+
+  $('.flip-card-inner').on("click", function(){
+    village = $(this).attr('data-init');
+    hook();
+    $('.wrapper').hide();
+    $('#initiativeDetail').show();
+  })
+  // console.log(initiatives)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
   var currentInitiative = ""
   function hook(){
     var village_html = "";
@@ -81,6 +144,8 @@
       var village = $('#village').val();
       $.each(initiatives[currentInitiative][village], function(index, data){
         event_html += "<option value='"+index+"'>"+data["title"]+"</option>"
+      console.log(data)
+
       })
       $('#event').html(event_html);
     })
@@ -91,6 +156,8 @@
     $('#event').on("change", function(){
       $('#eventDetailDiv').load(initiatives[currentInitiative][$('#village').val()][$('#event').val()]["html"]);
     })
+    //TESTING
+    // console.log('HEY',currentInitiative,$('#village').val(),$('#event').val());
     $('#event').trigger('change');
   }
 
@@ -101,7 +168,8 @@
     $('.wrapper').hide();
     $('#initiativeDetail').show();
   })
-</script>
+  console.log(initiatives)
+</script> -->
 
 <style>
 #initiativeDetail{
@@ -236,5 +304,8 @@
     margin-bottom: 10px;
     border: 1px solid #DDDDDD;
     border-radius: 7px;
+  }
+  .flip-card-front .heading {
+    text-transform: uppercase;
   }
 </style>
