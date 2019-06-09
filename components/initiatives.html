@@ -1,6 +1,6 @@
 <div class="wrapper container row">
  <div class="flip-card col-md-4">
-  <div class="flip-card-inner" data-init="Beladi_Salhapur">
+  <div class="flip-card-inner" data-init="Beladi Salhapur">
     <div class="flip-card-front" style="background-image: url('resources/images/initiatives/awareness.jpg')">
     	<div class="heading">Beladi Salhapur</div>
     </div>
@@ -51,6 +51,7 @@
 
       </select>
     </div> -->
+    <div id="village"></div>
     <!-- <div class="col-md-6"></div> -->
     <div class="form-group col-md-12">
       <label for="event">Select an event</label>
@@ -102,6 +103,7 @@
 
   $('.flip-card-inner').on("click", function(){
     village = $(this).attr('data-init');
+    $('#village').html(`<h2 style="display: block; marginTop: 15px; marginBottom: 10px; text-align: center">${village}</h2>`)
     hook();
     $('.wrapper').hide();
     $('#initiativeDetail').show();
