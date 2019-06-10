@@ -292,7 +292,8 @@
     text-align: justify;
     padding: 0px 30px;
     margin: auto;
-    max-width: 800px;
+    max-width: 1044px;
+    /* max-width: 800px; */
   }
   .init-container .panel-heading{
     text-transform: uppercase;
@@ -301,12 +302,39 @@
     text-align: center;
   }
   #initiativeDetail .row{
-    max-width: 742px;
+    /* max-width: 742px; */
+    max-width: 983px;
     margin: auto;
     margin-bottom: 10px;
     border: 1px solid #DDDDDD;
     border-radius: 7px;
   }
+  .initiativeContentList {
+    list-style-type: none;
+    padding: 0;
+  }
+  .initiativeContentTemplate {
+    display:flex;
+    height: fit-content;
+    padding-top: 10px; 
+    vertical-align: center;
+    align-self: center;
+  }
+  .initiativeContentTemplate img {
+    
+    max-height: 400px;
+  }
+  .initiativeContentTemplate:nth-of-type(even) img {
+    margin-left: 40px;
+    margin-right: 0px;
+  }
+  .initiativeContentTemplate div {
+    align-self: center;
+  }
+  .initiativeContentTemplate:first-child {
+    padding-top: 0;
+  }
+  
   .flip-card-front .heading {
     text-transform: uppercase;
   }
