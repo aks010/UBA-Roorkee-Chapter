@@ -36,6 +36,7 @@
 	<script src="resources/js/init.js"></script>
 </head>
 <body>
+
 	<div id="loading-screen">
 		<div class="wrap">
 			<div class="loading">
@@ -45,9 +46,15 @@
 		</div>
 	</div>
 	<script>loadingShow();</script>
-	<div class="header">
-		
+	<div class="ubaTitleHeader">
+			<a  onclick="loadPage('home')"><img class="top-uba-logo" src="resources/images/logo.png" /></a>
+		<div>
+			<h1 style="font-size: 4.3rem">UNNAT BHARAT ABHIYAAN</h1>
+			<h2 style="font-size: 3.2rem">IIT ROORKEE</h2>
+		</div>
+		<img class="top-iitr-logo" src="resources/images/iitr-logo.png" height="100" width="100" />
 	</div>
+	
 
 	<div id="navbar">
 		<nav class="navbar navbar-inverse" role="navigation" style="border-radius: 0">
@@ -59,16 +66,18 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" onclick="loadPage('home')"><div class="row"><img src="resources/images/uba.png" width="100" /></div><!-- <div class="row">IIT Roorkee
-					</div> --></a></div>
+					<!-- <a class="navbar-brand" onclick="loadPage('home')"><div class="row"><img src="resources/images/uba.png" width="100" height="100px" /></div> -->
+					<!-- <div class="row">IIT Roorkee</div> -->
+					<!-- </a></div> --> 
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="display: flex">
 						<ul class="nav navbar-nav">
+								<li class="villages" ><a onclick="loadPage('home')">HOME</a><span class="hover"></span></li>
 							<!-- <li class="approach" ><a onclick="loadingShow()">APPROACH</a><span class="hover"></span></li> -->
 							<li class="villages" ><a onclick="loadPage('villages')">VIllAGES</a><span class="hover"></span></li>
 							<li class="initiatives" ><a onclick="loadPage('initiatives')">INITIATIVES</a><span class="hover"></span></li>
 							<!-- <li class="incampus-events" ><a>IN-CAMPUS EVENTS</a><span class="hover"></span></li> -->
-							<li class="student-team" ><a onclick="loadPage('team')">STUDENT TEAM</a><span class="hover"></span></li>
+							<li class="student-team" ><a onclick="loadPage('team')">TEAM</a><span class="hover"></span></li>
 							<!-- <li class="winter-school" ><a>In News</a><span class="hover"></span></li> -->
 							<li class="contact-us" ><a href="mailto:uba@iitr.ac.in">Contact Us</a><span class="hover"></span></li>
 							<!-- <form class="navbar-form navbar-right" action="">
@@ -82,6 +91,9 @@
 				</div>
 			</nav>
 		</div>
+		<div class="header">
+		
+		</div>
 		<div id="uba-content">
 			<div class="content">
 
@@ -92,8 +104,8 @@
 		<footer>
 			<div class="extra"><div class="collab">For collaboration opportunities, mail us at<br><span class="mailid">uba@iitr.ac.in</span></div></div>
 			<div class="bottom"><span class="fas fa-angle-double-up"></span></div>
-			<div class="social-icons"><span style="border-bottom: 2px solid rgb(34,43, 49); padding-bottom:10px; padding-right: 2%; padding-left: 2%"><a class=""><span class="fab fa-twitter"></span></a><a class="" target="_blank" href="https://www.facebook.com/uba.iitroorkee/"><span class="fab fa-facebook-f"></span></a><a class="" target="_blank" href="https://www.instagram.com/iitroorkee_uba/"><span class="fab fa-instagram"></span></a><a class="" target="_blank" href="https://www.linkedin.com/company/ubaiitr/about"><span class="fab fa-linkedin-in"></span></a><a class=""><span class="fab fa-youtube"></span></a></span></div>
-			<div class="contact-info">YOU CAN CONTACT US AT<br><span class="fa fa-phone"></span>&nbsp;&nbsp;&nbsp;+91-7599239577<br>(CALLING HOURS - 10:00 AM to 06:00 PM)<br><a style="color: rgb(34, 43, 49); text-decoration: none" href="mailto:uba@iitr.ac.in" /><span class="fa fa-envelope"></span>&nbsp;&nbsp;&nbsp;<span style="font-family: Anaheim">uba@iitr.ac.in</span></a></div>
+			<div class="social-icons"><span style="border-bottom: 2px solid rgb(34,43, 49); padding-bottom:5px; padding-right: 2%; padding-left: 2%"><a class=""><span class="fab fa-twitter"></span></a><a class="" target="_blank" href="https://www.facebook.com/uba.iitroorkee/"><span class="fab fa-facebook-f"></span></a><a class="" target="_blank" href="https://www.instagram.com/iitroorkee_uba/"><span class="fab fa-instagram"></span></a><a class="" target="_blank" href="https://www.linkedin.com/company/ubaiitr/about"><span class="fab fa-linkedin-in"></span></a><a class=""><span class="fab fa-youtube"></span></a></span></div>
+			<div class="contact-info">YOU CAN CONTACT US AT<br><a style="color: rgb(34, 43, 49); text-decoration: none" href="mailto:uba@iitr.ac.in" /><span class="fa fa-envelope"></span>&nbsp;&nbsp;&nbsp;<span style="font-family: Anaheim">uba@iitr.ac.in</span></a></div>
 
 		</footer>
 
@@ -102,6 +114,18 @@
 		<!-- <script src="resources/js/load.js"></script> -->
 		<script src="vendors/aos/aos.js"></script>
 		<script>
+			window.onscroll = function() {myFunction()};
+
+			var navbar = document.getElementById("navbar");
+			var sticky = navbar.offsetTop;
+
+			function myFunction() {
+				if (window.pageYOffset >= sticky) {
+					navbar.classList.add("sticky")
+				} else {
+					navbar.classList.remove("sticky");
+				}	
+			}	
 			$(window).on("load", function(){
 				AOS.init();
 				init();

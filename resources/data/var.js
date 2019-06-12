@@ -114,45 +114,41 @@ var initiatives = {
 		},
 		{
 			"title": "Information Communication Technology",
-			"html": "components/initiatives/meerpur/meerpur8.html"
-		},
-		{
-			"title": "Pond Restoration",
 			"html": "components/initiatives/meerpur/meerpur9.html"
 		},
 		{
-			"title": "PMKVY",
+			"title": "Pond Restoration",
 			"html": "components/initiatives/meerpur/meerpur10.html"
 		},
 		{
-			"title": "Cattle Vaccination",
+			"title": "PMKVY",
 			"html": "components/initiatives/meerpur/meerpur11.html"
 		},
 		{
-			"title": "Health Van",
+			"title": "Cattle Vaccination",
 			"html": "components/initiatives/meerpur/meerpur12.html"
 		},
 		{
 			"title": "Campus Visit October 2018",
-			"html": "components/initiatives/meerpur/meerpur13.html"
+			"html": "components/initiatives/meerpur/meerpur8.html"
 		},
 		{
 			"title": "Campus Visit October 2019",
-			"html": "components/initiatives/meerpur/meerpur14.html"
+			"html": "components/initiatives/meerpur/meerpur13.html"
 		},
 	],
 	
 	"Puranpur": [{
 					"title": "Veterinary Camp",
-					"html": "components/initiatives/puranpur/puranh1.html"
+					"html": "components/initiatives/puranpur/puranpur1.html"
 				},
 				{
 					"title": "Health Camp",
-					"html": "components/initiatives/puranpur/puranh2.html"
+					"html": "components/initiatives/puranpur/puranpur2.html"
 				},
 				{
 					"title": "Adolescents Health and hygiene awareness programme",
-					"html": "components/initiatives/puranpur/puranh3.html"
+					"html": "components/initiatives/puranpur/puranpur3.html"
 				}],
 }
 

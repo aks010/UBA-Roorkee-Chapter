@@ -1,8 +1,8 @@
 <div class="car-container">
 	<div class="slideshow-container">
-		<img class="top-uba-logo" src="resources/images/logo.png" height="100" width="100" />
-		<img class="top-iitr-logo" src="resources/images/iitr-logo.png" height="100" width="100" />
-
+		<!-- <img class="top-uba-logo" src="resources/images/logo.png" height="100" width="100" />
+		<img class="top-iitr-logo" src="resources/images/iitr-logo.png" height="100" width="100" /> -->
+		
 		<div class="mySlides">
 			<div class="numbertext">1 / 6</div>
 			
@@ -46,6 +46,14 @@
 			<span class="dot" onclick="currentSlide(6)"></span> 
 		</div>
 	</div>
+	<div class="newsLetter">
+		<div>
+			<h3 style="text-align: center">Recent Activities	</h3>
+			<ul>
+				<li><a href="#">Newsletter</a></li>
+			</ul>
+		</div>
+	</div>
 
 	
 </div>
@@ -56,11 +64,15 @@ body {font-family: Verdana, sans-serif; margin:0}
 img {vertical-align: middle;}
 
 .car-container{
-	position: absolute;
-	padding: 20px;
-	padding-top: 90px;
-	width: 100%;
-	height: 100%;
+	/* position: absolute; */
+	padding: 90px 80px;
+	padding-bottom: 40px;
+	/* width: 100%; */
+	/* height: 100%; */
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+
 }
 
 .dot-div{
@@ -70,24 +82,61 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-	width: 100%;
-	height: 100%;
+	/* width: 56%; */
+	height: 336px;
 	position: relative;
-	margin: auto;
+	/* margin: auto; */
+	flex:2;
+	min-width: 500px;
+}
+.car-container .newsLetter {
+	flex: 1;
+	height: 336px;
+	width: 200px;
+	background: #1c1c1c;
+	border-left: 10px solid white;
+	color: white;
+	/* border: 10px solid white; */
+	padding: 15px;
+	border-right: none;
+	font-size: 1.5rem;
+}
+.car-container .newsLetter ul {
+	padding-top: 10px;
+}
+.car-container .newsLetter ul li a{
+	font-size: 1.9rem !important;
+}
+.car-container .newsLetter>div {
+	border: 2px solid #333;
+	height: 100%;
+	padding: 20px;
+	
+	
 }
 
 .top-uba-logo{
-	position: absolute;
-	top: 20px;
-	left: 30px;
-	opacity: 0.65;
+	/* position: absolute; */
+	/* top: 20px; */
+	/* left: 30px; */
+	/* opacity: 0.65; */
+	align-self: center;
+	min-width: 148px;
+	flex: 1;
+	
 }
 
 .top-iitr-logo{
-	position: absolute;
+	/* position: absolute;
 	top: 20px;
 	right: 30px;
-	opacity: 0.65;
+	opacity: 0.65; */
+	align-self: center;
+	/* width: 118px; */
+	height: 128px;
+	min-width: 128px;
+	max-width: 128px;
+	flex: 1;
 }
 
 
@@ -141,17 +190,26 @@ img {vertical-align: middle;}
 /* The dots/bullets/indicators */
 .dot {
 	cursor: pointer;
-	height: 15px;
-	width: 15px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
+	display: none;
+	/* height: 15px; */
+	/* width: 15px; */
+	/* margin: 0 2px; */
+	/* background-color: #bbb; */
+	/* border-radius: 50%; */
+	/* display: inline-block; */
+	border-top: 3px solid #333;
+	padding-bottom: 2px;
+	width:35px;
+	margin: 0 5px;
 	transition: background-color 0.6s ease;
 }
-
+.slideshow-container:hover .dot{
+	display: inline-block;
+}
 .active, .dot:hover {
-	background-color: #717171;
+	/* background-color: #717171; */
+	/* background-color: white; */
+	border-top: 3px solid #f1f1f1;
 }
 
 /* Fading animation */
@@ -164,7 +222,8 @@ img {vertical-align: middle;}
 
 .mySlides{
 	width: 100%;
-	height: 100%
+	height: 100%;
+	position: relative;
 }
 
 .mySlides *{

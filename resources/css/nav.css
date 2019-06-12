@@ -56,6 +56,30 @@ html, body{
   text-align: center;
   } */
 
+  .ubaTitleHeader {
+    background-color: hsl(0, 0%, 95%);
+
+    padding: 25px 70px;
+    text-align: center;
+    display: flex;
+
+  }
+  .ubaTitleHeader div {
+    flex: 5;
+  }
+  .ubaTitleHeader a {
+    display: flex;
+  }
+  .ubaTitleHeader img:nth-child(1) {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .ubaTitleHeader img:nth-child(2) {
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .header{
     height: 100%;
   }
@@ -63,9 +87,9 @@ html, body{
   #navbar {
     overflow: hidden;
     z-index: 1000000;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
-    top: 0;
+    /* top: 0; */
   }
 
   .content {
@@ -89,6 +113,7 @@ html, body{
   #navbar .navbar-inverse{
     /* height: 100px; */
     background-color: #1c1c1c;
+    
     border-bottom-width: 0px;
     border-bottom-color: #cc3300;
     border-bottom-style: solid;
