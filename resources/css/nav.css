@@ -29,21 +29,21 @@ html, body{
   transition: 0.3s ease;
   /* background: #3fa46a; */
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   text-decoration: none;
   /* border-top: 4px solid #1c1c1c; */
   /* border-bottom: 4px solid #1c1c1c; */
-  padding: 12px 0;
+  padding: 10px 0;
   margin: 6px 8px;
   
   
 }
 #navbar ul.nav li:hover {
   color:  #ffffff;
-  margin-top: 12px;
+  /* margin-top: 12px; */
   /* border-top: 4px solid #ffffff; */
   /* border-bottom: 4px solid #ffffff; */
-  padding: 6px 0; 
+  padding-top: 7px; 
 }
 #navbar ul.nav li a{
   padding-top:  4px;
@@ -66,8 +66,13 @@ html, body{
 
     padding: 15px 70px;
     text-align: center;
+    font-family: 'Roboto Slab', serif !important;
    
   }
+.ubaTitleHeader div h1 {
+  font-family: 'Roboto Slab', serif !important;
+}
+
   .titleHeaderLayout {
     max-width: 2000px;
     margin: auto;
@@ -130,9 +135,12 @@ html, body{
     max-width: 2000px;
     margin:auto;
   }
-
+  .sticky + .headerContainer {
+    padding-top: 70px;
+  }
   .sticky + #uba-content {
-    margin-top: 116px;
+    /* margin-top: 116px; */
+    padding-top: 110px;
   }
   #navbar .navbar-inverse{
     /* height: 100px; */

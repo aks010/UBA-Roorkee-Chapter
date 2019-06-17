@@ -32,6 +32,7 @@ footer .social-icons span.fab{
 
 footer{
 	/* background-color: #fff; */
+	background: #f1f1f1;
 }
 
 footer .contact-info{
@@ -55,6 +56,7 @@ footer .bottom{
 	width: 100%;
 	text-align: center;
 	background-color: rgb(34, 43, 49);
+	/* background: #202124; */
 }
 
 footer .bottom span{
@@ -68,6 +70,7 @@ footer .bottom span{
 	margin-bottom: 0px;
 	border-top-left-radius: 24px;
 	border-top-right-radius: 24px;
+	cursor: pointer;
 }
 
 footer .extra{
@@ -75,13 +78,17 @@ footer .extra{
 	display: flex;
 	align-items: center;
 	background-color: rgb(34, 43, 49);
+	/* background: #202124 !important; */
 }
 
 footer .collab{
 	text-align: center;
 	padding:  10px 50px;
 	background-color: rgba(51,51,51,0.65);
+	/* background: #f1f1f1; */
+	/* color: #202124; */
 	color: #fff;
+	border-radius: 0.2rem;
 	letter-spacing: 3px;
 	font-size:  20px;
 	margin: auto;
