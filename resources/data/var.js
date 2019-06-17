@@ -138,8 +138,9 @@ var initiatives = {
 		},
 	],
 	
-	"Puranpur": [{
-					"title": "Veterinary Camp",
+	"Puranpur": [
+				{
+					"title": "Cattle Vaccination",
 					"html": "components/initiatives/puranpur/puranpur1.html"
 				},
 				{
@@ -147,9 +148,30 @@ var initiatives = {
 					"html": "components/initiatives/puranpur/puranpur2.html"
 				},
 				{
-					"title": "Adolescents Health and hygiene awareness programme",
+					"title": "ICT Initiative",
 					"html": "components/initiatives/puranpur/puranpur3.html"
-				}],
+				},
+				{
+					"title": "Adolescents Health and Hygiene Initiative",
+					"html": "components/initiatives/puranpur/puranpur4.html"
+				},
+				{
+					"title": "iNSPIRE",
+					"html": "components/initiatives/puranpur/puranpur5.html"
+				},
+				{
+					"title": "Participation in Gram Sabha Meeting",
+					"html": "components/initiatives/puranpur/puranpur6.html"
+				},
+				{
+					"title": "Science Exhibition in IITR Campus",
+					"html": "components/initiatives/puranpur/puranpur7.html"
+				},
+				{
+					"title": "Republic Day Events",
+					"html": "components/initiatives/puranpur/puranpur8.html"
+				},
+		],
 }
 
 

@@ -44,23 +44,33 @@
 </div>
 
 <div id="initiativeDetail">
-  <div class="row">
+  <!-- <div class="row"> -->
     <!-- <div class="form-group col-md-3">
       <label for="village">Select a village</label>
       <select class="form-control" id="village">
 
       </select>
     </div> -->
-    <div id="village"></div>
+    <!-- <div id="village"></div> -->
     <!-- <div class="col-md-6"></div> -->
-    <div class="form-group col-md-12">
+    <!-- <div class="form-group col-md-12">
       <label for="event">Select an event</label>
       <select class="form-control" id="event">
 
-      </select>
-    </div>
+      </select> -->
+    <!-- </div> -->
+
+  <!-- </div> -->
+  <div class="initiativeContainer">
+  <div class="eventsContainer"> 
+    <div id="village"></div>
+    <ul id="eventList">
+      <!-- <li class="eventItem selected" -->
+        <!-- li class="eventItem" -->
+    </ul>
   </div>
-  <div id="eventDetailDiv" class="container"></div>
+  <div id="eventDetailDiv" ></div>
+</div>
 </div>
 
 <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="populateModal('other')">Open Large Modal</button> -->
@@ -68,6 +78,61 @@
 
 
 <script>
+var initiative = ""
+var event_html = "";
+  function hook(){
+    event_html = "";
+    $.each(initiatives[village], function(index, data){
+      event_html += `<li class="eventItem" value=${index}>${data["title"]}</li>`
+    })
+    $('#eventList').html(event_html);
+    // hookVillages();
+    hookEvents();
+  }
+
+
+
+$('.flip-card-inner').on("click", function(){
+    village = $(this).attr('data-init');
+    $('#village').html(village)
+    hook();
+    $('.wrapper').hide();
+    $('#initiativeDetail').show();
+  })
+console.log($('#eventItem').val());
+
+function hookEvents(){
+  console.log("called");
+  $('#eventDetailDiv').load(initiatives[village][0]["html"]);
+  
+  prevTarget = $('.eventItem')
+  console.log(prevTarget);
+  prevTarget.className = "eventItem active_event"
+  $('#eventList').on('click', function(e){
+    
+    // $('#eventList').html(event_html);
+    prevTarget.className = "eventItem"
+    let item = e.target.closest('.eventItem')
+    item.className = "eventItem active_event"
+    console.log(item)
+    $('#eventDetailDiv').load(initiatives[village][item.value]["html"]);
+    prevTarget = item;
+    
+    // EventTarget.addClass('.active_event')
+  })
+  // $('#eventItem').trigger('change');
+}
+
+</script>
+
+
+
+
+
+
+
+
+<!-- <script>
   var initiative = ""
   function hook(){
     var event_html = "";
@@ -110,7 +175,7 @@
   })
   // console.log(initiatives)
 </script>
-
+ -->
 
 
 
@@ -185,7 +250,7 @@
 }
 
 .content{
-  padding-top: 40px;
+  /* padding-top: 40px; */
 }
 .flip-card {
   padding-top: 30px;
@@ -292,7 +357,7 @@
     text-align: justify;
     padding: 0px 30px;
     margin: auto;
-    max-width: 1044px;
+    max-width: 1200px;
     /* max-width: 800px; */
   }
   .init-container .panel-heading{
@@ -301,14 +366,84 @@
     font-size: 24px;
     text-align: center;
   }
-  #initiativeDetail .row{
+  #initiativeDetail .initiativeContainer {
+    width: 100%;
+    max-width: 2000px;
+    min-width: 1000px;
+    display: flex;
+    /* height: 100vh; */
+    margin: auto;
+    /* border: 2px solid black; */
+  }
+
+  #initiativeDetail .eventsContainer{
     /* max-width: 742px; */
-    max-width: 983px;
+    /* max-width: 983px;
     margin: auto;
     margin-bottom: 10px;
     border: 1px solid #DDDDDD;
-    border-radius: 7px;
+    border-radius: 7px; */
+    /* float: left; */
+    flex: 1;
+    /* position: fixed; */
+    /* height: fit-content; */
+    min-height: 100%;
+    width: 300px;
+    max-width: 600px;
+    min-width: 200px;
+    overflow: hidden;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
   }
+  #eventDetailDiv{
+    padding: 0;
+    flex: 3.5;
+    border: none;
+    height: auto;
+
+  }
+
+  #initiativeDetail .eventsContainer #village {
+    /* border: 1px solid red; */
+    line-height: 3;
+    min-height: fit-content;
+    /* height: 120px; */
+    display: flex;
+    padding: 15px;
+    font-size: 3rem;
+  }
+
+  #initiativeDetail #eventList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+  }
+  #initiativeDetail .eventItem {
+    transition: 0.1s ease-out;
+    padding: 15px;
+    max-height: 70px;
+    height: fit-content;
+    line-height: 1.5;
+    /* border-bottom: 1px solid #bbb; */
+
+    
+    font-size: 1.5rem;
+    
+  }
+  #initiativeDetail .eventItem:hover, #initiativeDetail .active_event {
+    background: #202124;
+    color: white; 
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+  }
+   
+
+
+
   .initiativeContentList {
     list-style-type: none;
     padding: 0;
@@ -316,7 +451,7 @@
   .initiativeContentTemplate {
     display:flex;
     height: fit-content;
-    padding-top: 10px; 
+    padding-top: 16px; 
     vertical-align: center;
     align-self: center;
     justify-content: space-between;
@@ -341,8 +476,16 @@
   .initiativeContentTemplate:first-child {
     padding-top: 0;
   }
-  
+  .panel {
+    border: none !important;
+  }
+
   .flip-card-front .heading {
     text-transform: uppercase;
+  }
+  @media (min-width: 1800px) {
+    .flip-card {
+      height: 400px !important;
+    }
   }
 </style>

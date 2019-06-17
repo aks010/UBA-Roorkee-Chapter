@@ -7,7 +7,10 @@ html, body{
   height: 100px;
   /* float:  left; */
 }
-
+.header {
+  max-width: 2000px;
+  margin: auto;
+}
 .header h4{
   font-family: Acme;
   color: #cc3300;
@@ -25,19 +28,21 @@ html, body{
 #navbar ul.nav li {
   transition: 0.3s ease;
   /* background: #3fa46a; */
-  color: #f2f2f2;
+  color: white;
   font-size: 20px;
   text-decoration: none;
-  border-top: 4px solid #1c1c1c;
-  border-bottom: 4px solid #1c1c1c;
+  /* border-top: 4px solid #1c1c1c; */
+  /* border-bottom: 4px solid #1c1c1c; */
   padding: 12px 0;
   margin: 6px 8px;
+  
+  
 }
 #navbar ul.nav li:hover {
   color:  #ffffff;
   margin-top: 12px;
-  border-top: 4px solid #ffffff;
-  border-bottom: 4px solid #ffffff;
+  /* border-top: 4px solid #ffffff; */
+  /* border-bottom: 4px solid #ffffff; */
   padding: 6px 0; 
 }
 #navbar ul.nav li a{
@@ -59,10 +64,14 @@ html, body{
   .ubaTitleHeader {
     background-color: hsl(0, 0%, 95%);
 
-    padding: 25px 70px;
+    padding: 15px 70px;
     text-align: center;
+   
+  }
+  .titleHeaderLayout {
+    max-width: 2000px;
+    margin: auto;
     display: flex;
-
   }
   .ubaTitleHeader div {
     flex: 5;
@@ -74,11 +83,21 @@ html, body{
     float: left;
     padding-left: 10px;
     padding-right: 10px;
+    min-width: 148px;
+    align-self: center;
+    flex: 1; 
   }
-  .ubaTitleHeader img:nth-child(2) {
+  .ubaTitleHeader img:nth-child(2), .ubaTitleHeader .iitr_logo {
     float: right;
     padding-left: 10px;
     padding-right: 10px;
+    align-self: center;
+    /* width: 118px; */
+    height: auto;
+    min-width: 128px;
+    width: 128px;
+    /* max-width: 128px; */
+    flex: 1;
   }
   .header{
     height: 100%;
@@ -90,6 +109,9 @@ html, body{
     /* position: fixed; */
     width: 100%;
     /* top: 0; */
+    background: #202124;
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    color: white;
   }
 
   .content {
@@ -105,6 +127,8 @@ html, body{
 
   #uba-content{
     width: 100%;
+    max-width: 2000px;
+    margin:auto;
   }
 
   .sticky + #uba-content {
@@ -130,6 +154,8 @@ html, body{
 
   #navbar .navbar{
     margin-bottom: 0px;
+    max-width: 2000px;
+    margin: auto;
   }
 
   #navbar nav .nav{
@@ -139,17 +165,18 @@ html, body{
   #navbar .navbar-nav{
     margin:  0 auto;
     float: none;
-    padding-left: 95px;
+    /* padding-left: 95px; */
   }
 
   #navbar nav a{
-    font:700 13px Lato;
-    letter-spacing:1.5px;
+    font:500 1.6rem Lato;
+    letter-spacing:1.3px;
     padding: 0px 16px;
-    color:#a3bfc6;
+    columns: #f1f1f1;
     text-transform:uppercase;
     position:relative;
     z-index:1000;
+    cursor: pointer;
   }
   #navbar nav a:hover{
     color:#FFF;
